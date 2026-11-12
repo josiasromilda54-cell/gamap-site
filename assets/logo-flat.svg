@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f9bff"/>
+      <stop offset="1" stop-color="#1565c0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Anel: metade esquerda -->
+  <path d="M 256 46 A 210 210 0 0 0 256 466" fill="none" stroke="#1e78d0" stroke-width="52"/>
+  <!-- Anel: metade direita -->
+  <path d="M 256 466 A 210 210 0 0 0 256 46" fill="none" stroke="#2f9bff" stroke-width="52"/>
+
+  <!-- Barra esquerda 1 (menor) -->
+  <rect x="140" y="300" width="44" height="166" fill="#155a9e"/>
+  <!-- Barra esquerda 2 -->
+  <rect x="196" y="252" width="44" height="214" fill="#1e78d0"/>
+  <!-- Barra esquerda 3 -->
+  <rect x="252" y="204" width="44" height="262" fill="url(#g1)"/>
+
+  <!-- Barra direita 1 (alta, a partir do topo) -->
+  <rect x="308" y="90" width="48" height="376" fill="#2f9bff"/>
+  <!-- Barra direita 2 -->
+  <rect x="366" y="140" width="48" height="326" fill="#2f7fd1"/>
+  <!-- Barra direita 3 (parcial, perto do anel) -->
+  <rect x="424" y="200" width="40" height="266" fill="#1e5fa8"/>
+</svg>
