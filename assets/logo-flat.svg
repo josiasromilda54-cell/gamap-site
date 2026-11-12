@@ -21,11 +21,11 @@
   <!-- ===== ANEL AZUL: 12h -> 9h -> 6h, cortado no fio vertical x=294 ===== -->
   <path d="M294 131 A245 245 0 0 0 294 619 L294 595 A221 221 0 0 1 294 155 Z" fill="#1e74cf"/>
 
-  <!-- ===== ARCO CLARO (ex-prata): ~1h35 até ~4h20, cortes diagonais ===== -->
-  <path d="M497 210 A245 245 0 0 1 501 536 L437 560 A221 221 0 0 0 516 280 Z" fill="#45c4f5"/>
+  <!-- ===== ARCO CLARO (ex-prata): ~1h35 até ~4h45 — desce POR TRÁS da torre 2 ===== -->
+  <path d="M497 210 A245 245 0 0 1 453 578 L437 560 A221 221 0 0 0 516 280 Z" fill="#45c4f5"/>
 
   <!-- ===== TORRE 1: fura o topo do círculo (topo desce à direita) ===== -->
   <polygon points="316,42 383,94 383,584 316,584" fill="#45c4f5"/>
-  <!-- ===== TORRE 2: nasce dentro do círculo ===== -->
+  <!-- ===== TORRE 2: nasce dentro do círculo; cobre o final do arco ===== -->
   <polygon points="406,113 473,168 473,566 406,566" fill="#45c4f5"/>
 </svg>
