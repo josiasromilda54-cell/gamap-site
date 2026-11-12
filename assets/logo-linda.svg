@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="g3dlinda" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="50%" stop-color="#33b6ff"/>
+      <stop offset="100%" stop-color="#2fd8e0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Camada inferior (sombra / layer base) -->
+  <text x="400" y="226" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="120" fill="#0a1420" letter-spacing="14">LINDA</text>
+
+  <!-- Camada 3D (extrusão) -->
+  <text x="400" y="210" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="120" fill="url(#g3dlinda)" letter-spacing="14">LINDA</text>
+</svg>
