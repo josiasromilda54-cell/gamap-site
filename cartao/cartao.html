@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cartão de Visita — GAMAP Construções</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 40px; padding: 40px 20px;
+  }
+  .titulo { color: #9db2c8; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* ===== CARTÃO (90x50mm, padrão de gráfica) ===== */
+  .cartao {
+    width: 90mm; height: 50mm;
+    border-radius: 4mm;
+    position: relative; overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    color: #e8eef6;
+  }
+
+  /* ---------- FRENTE ---------- */
+  .frente {
+    background:
+      radial-gradient(ellipse at 85% -10%, rgba(51,182,255,.25), transparent 50%),
+      linear-gradient(135deg, #0d1b2e 0%, #0a1420 60%, #071019 100%);
+    display: flex; align-items: center;
+  }
+  .frente::before {
+    content: ''; position: absolute; right: -12mm; top: -18mm;
+    width: 55mm; height: 55mm; border-radius: 50%;
+    border: 2.5mm solid rgba(51,182,255,.18);
+  }
+  .frente::after {
+    content: ''; position: absolute; right: -4mm; top: -10mm;
+    width: 40mm; height: 40mm; border-radius: 50%;
+    border: .6mm solid rgba(47,216,224,.35);
+  }
+  .frente .logo {
+    width: 26mm; height: 26mm; border-radius: 7mm;
+    margin-left: 8mm; object-fit: cover;
+    box-shadow: 0 4px 18px rgba(0,0,0,.6);
+  }
+  .frente .texto { margin-left: 7mm; }
+  .marca { font-size: 27px; font-weight: 900; letter-spacing: 3px; line-height: 1; color: #fff; }
+  .marca small { display: block; font-size: 9.5px; font-weight: 600; letter-spacing: 6.5px; color: #33b6ff; margin-top: 2px; }
+  .slogan { margin-top: 5mm; font-size: 10.5px; color: #9db2c8; }
+  .slogan b { color: #2fd8e0; font-weight: 600; }
+  .frente .faixa {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 5mm;
+    background: linear-gradient(90deg, #1565c0, #33b6ff, #2fd8e0);
+  }
+
+  /* ---------- VERSO ---------- */
+  .verso {
+    background:
+      radial-gradient(ellipse at 10% 110%, rgba(51,182,255,.2), transparent 45%),
+      linear-gradient(120deg, #071019 0%, #0d1b2e 100%);
+    display: grid; grid-template-columns: 1fr 24mm; align-items: center;
+    padding: 5mm 6mm;
+  }
+  .verso::before {
+    content: ''; position: absolute; left: -15mm; bottom: -20mm;
+    width: 50mm; height: 50mm; border-radius: 50%;
+    border: 2mm solid rgba(51,182,255,.14);
+  }
+  .info h3 { font-size: 15px; font-weight: 900; letter-spacing: 2.5px; color: #fff; }
+  .info h3 small { display: block; font-size: 8px; letter-spacing: 4px; color: #33b6ff; font-weight: 600; margin-top: 1px; }
+  .cargo { font-size: 9px; color: #9db2c8; margin: 1mm 0 3mm; }
+  .contato { display: grid; gap: 1.6mm; font-size: 9.5px; color: #cdd9e5; }
+  .contato span { display: flex; align-items: center; gap: 2mm; }
+  .contato .ico {
+    width: 4mm; height: 4mm; border-radius: 1.2mm; flex: none;
+    background: linear-gradient(135deg, #1565c0, #33b6ff);
+    display: grid; place-items: center; font-size: 7px; color: #fff;
+  }
+  .contato strong { color: #fff; font-weight: 700; }
+  .servicos { margin-top: 2.5mm; font-size: 8px; color: #9db2c8; letter-spacing: .3px; }
+  .servicos b { color: #2fd8e0; }
+  .qr {
+    width: 22mm; height: 22mm; border-radius: 2mm; background: #fff;
+    padding: 1.2mm; box-shadow: 0 4px 14px rgba(0,0,0,.5);
+    justify-self: end;
+  }
+  .qr img { width: 100%; height: 100%; }
+  .qr-legenda { grid-column: 2; font-size: 6.5px; color: #9db2c8; text-align: center; letter-spacing: .5px; margin-top: 1mm; }
+
+  @media print {
+    body { background: #fff; padding: 0; gap: 5mm; }
+    .titulo { display: none; }
+    .cartao { box-shadow: none; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+  <p class="titulo">Frente</p>
+  <div class="cartao frente">
+    <img class="logo" src="logo.jpg" alt="Logo GAMAP">
+    <div class="texto">
+      <div class="marca">GAMAP<small>CONSTRUÇÕES</small></div>
+      <p class="slogan">Construindo sonhos. <b>Edificando confiança.</b></p>
+    </div>
+    <div class="faixa"></div>
+  </div>
+
+  <p class="titulo">Verso</p>
+  <div class="cartao verso">
+    <div class="info">
+      <h3>GAMAP<small>CONSTRUÇÕES</small></h3>
+      <p class="cargo">Construções e Reformas — Caçapava, SP</p>
+      <div class="contato">
+        <span><i class="ico">📞</i><strong>(12) 99790-1456</strong>&nbsp;WhatsApp</span>
+        <span><i class="ico">📷</i>@diogo.gamap</span>
+        <span><i class="ico">📍</i>Caçapava, SP — Atende a região</span>
+      </div>
+      <p class="servicos"><b>Projetos · Construções · Reformas · Acabamentos · Locação de equipamentos</b></p>
+    </div>
+    <div class="qr"><img src="qr-whatsapp.png" alt="QR WhatsApp"></div>
+    <p class="qr-legenda">Aponte a câmera<br>e peça um orçamento</p>
+  </div>
+
+</body>
+</html>
