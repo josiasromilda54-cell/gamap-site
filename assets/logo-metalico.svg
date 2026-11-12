@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+  <!--
+    GAMAP — versão METALIZADO FOSCO (vetor)
+    Mesma geometria medida do original (cortes idênticos) + gradientes acetinados
+  -->
+  <defs>
+    <!-- Recorte dos prédios: semicírculo interno esquerdo -->
+    <clipPath id="predios">
+      <path d="M294 155 A221 221 0 0 0 294 595 Z"/>
+    </clipPath>
+
+    <!-- Recortes para o brilho diagonal (sheen) sutil -->
+    <clipPath id="recAzul">
+      <path d="M294 131 A245 245 0 0 0 294 619 L294 595 A221 221 0 0 1 294 155 Z"/>
+      <path d="M294 155 A221 221 0 0 0 294 595 Z"/>
+    </clipPath>
+    <clipPath id="recPrata">
+      <polygon points="316,42 383,94 383,584 316,584"/>
+      <polygon points="406,113 473,168 473,566 406,566"/>
+      <path d="M497 210 A245 245 0 0 1 453 578 L437 560 A221 221 0 0 0 516 280 Z"/>
+    </clipPath>
+
+    <!-- Azul: escuro no topo, brilho subindo pra base (como o original) -->
+    <linearGradient id="gAzul" gradientUnits="userSpaceOnUse" x1="0" y1="131" x2="0" y2="620">
+      <stop offset="0"    stop-color="#16549B"/>
+      <stop offset="0.25" stop-color="#1B67B8"/>
+      <stop offset="0.6"  stop-color="#1E74CF"/>
+      <stop offset="1"    stop-color="#2E93E8"/>
+    </linearGradient>
+
+    <!-- Prata fosco: claro no topo, escurecendo até a base -->
+    <linearGradient id="gPrata" gradientUnits="userSpaceOnUse" x1="0" y1="42" x2="0" y2="620">
+      <stop offset="0"    stop-color="#F5F5F5"/>
+      <stop offset="0.18" stop-color="#E9E9E9"/>
+      <stop offset="0.45" stop-color="#CFCFCF"/>
+      <stop offset="0.72" stop-color="#AFAFAF"/>
+      <stop offset="1"    stop-color="#7E7E7E"/>
+    </linearGradient>
+
+    <!-- Brilho diagonal bem sutil (acetinado, sem espelho) -->
+    <linearGradient id="gBrilhoAzul" gradientUnits="userSpaceOnUse" x1="120" y1="640" x2="470" y2="90">
+      <stop offset="0"    stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="1"    stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gBrilhoPrata" gradientUnits="userSpaceOnUse" x1="290" y1="620" x2="580" y2="80">
+      <stop offset="0"    stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="0.5"  stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="1"    stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== PRÉDIOS AZUIS (topos sobem à direita; fundem com o anel embaixo) ===== -->
+  <g clip-path="url(#predios)" fill="url(#gAzul)">
+    <polygon points="138,330 205,272 205,640 138,640"/>
+    <polygon points="227,254 294,190 294,640 227,640"/>
+  </g>
+
+  <!-- ===== ANEL AZUL: 12h -> 9h -> 6h, cortado no fio vertical x=294 ===== -->
+  <path d="M294 131 A245 245 0 0 0 294 619 L294 595 A221 221 0 0 1 294 155 Z" fill="url(#gAzul)"/>
+
+  <!-- Sheen sutil no azul -->
+  <g clip-path="url(#recAzul)">
+    <rect x="60" y="60" width="520" height="580" fill="url(#gBrilhoAzul)"/>
+  </g>
+
+  <!-- ===== ARCO PRATA (ex-metal): ~1h35 até ~4h45, por trás da torre 2 ===== -->
+  <path d="M497 210 A245 245 0 0 1 453 578 L437 560 A221 221 0 0 0 516 280 Z" fill="url(#gPrata)"/>
+
+  <!-- ===== TORRE 1: fura o topo do círculo ===== -->
+  <polygon points="316,42 383,94 383,584 316,584" fill="url(#gPrata)"/>
+  <!-- ===== TORRE 2: nasce dentro do círculo; cobre o final do arco ===== -->
+  <polygon points="406,113 473,168 473,566 406,566" fill="url(#gPrata)"/>
+
+  <!-- Sheen sutil no prata -->
+  <g clip-path="url(#recPrata)">
+    <rect x="260" y="20" width="360" height="600" fill="url(#gBrilhoPrata)"/>
+  </g>
+</svg>
