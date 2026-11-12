@@ -45,6 +45,15 @@
     box-shadow: 0 4px 18px rgba(0,0,0,.6);
   }
   .frente .texto { margin-left: 7mm; }
+  .modelo {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px; font-weight: 900; letter-spacing: 8px;
+    color: rgba(51,182,255,.10);
+    text-transform: uppercase;
+    pointer-events: none;
+    white-space: nowrap;
+  }
   .marca { font-size: 27px; font-weight: 900; letter-spacing: 3px; line-height: 1; color: #fff; }
   .marca small { display: block; font-size: 9.5px; font-weight: 600; letter-spacing: 6.5px; color: #33b6ff; margin-top: 2px; }
   .slogan { margin-top: 5mm; font-size: 10.5px; color: #9db2c8; }
@@ -80,6 +89,8 @@
   .contato strong { color: #fff; font-weight: 700; }
   .servicos { margin-top: 2.5mm; font-size: 8px; color: #9db2c8; letter-spacing: .3px; }
   .servicos b { color: #2fd8e0; }
+  .site { margin-top: 2mm; font-size: 8.5px; color: #9db2c8; letter-spacing: .5px; }
+  .site b { color: #fff; font-weight: 700; }
   .qr {
     width: 22mm; height: 22mm; border-radius: 2mm; background: #fff;
     padding: 1.2mm; box-shadow: 0 4px 14px rgba(0,0,0,.5);
@@ -87,6 +98,15 @@
   }
   .qr img { width: 100%; height: 100%; }
   .qr-legenda { grid-column: 2; font-size: 6.5px; color: #9db2c8; text-align: center; letter-spacing: .5px; margin-top: 1mm; }
+  .modelo {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px; font-weight: 900; letter-spacing: 6px;
+    color: rgba(51,182,255,.10);
+    text-transform: uppercase;
+    pointer-events: none;
+    white-space: nowrap;
+  }
 
   @media print {
     body { background: #fff; padding: 0; gap: 5mm; }
@@ -104,11 +124,13 @@
       <div class="marca">GAMAP<small>CONSTRUÇÕES</small></div>
       <p class="slogan">Construindo sonhos. <b>Edificando confiança.</b></p>
     </div>
+    <div class="modelo">MODELO</div>
     <div class="faixa"></div>
   </div>
 
   <p class="titulo">Verso</p>
   <div class="cartao verso">
+    <div class="modelo">MODELO</div>
     <div class="info">
       <h3>GAMAP<small>CONSTRUÇÕES</small></h3>
       <p class="cargo">Construções e Reformas — Caçapava, SP</p>
@@ -118,6 +140,7 @@
         <span><i class="ico">📍</i>Caçapava, SP — Atende a região</span>
       </div>
       <p class="servicos"><b>Projetos · Construções · Reformas · Acabamentos · Locação de equipamentos</b></p>
+      <p class="site">www.gamap.com.br</p>
     </div>
     <div class="qr"><img src="qr-whatsapp.png" alt="QR WhatsApp"></div>
     <p class="qr-legenda">Aponte a câmera<br>e peça um orçamento</p>
